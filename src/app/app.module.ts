@@ -40,6 +40,7 @@ import { CheckoutCompleteComponent } from './checkout-complete/checkout-complete
 import { ForgottenPasswordComponent } from './forgotten-password/forgotten-password.component';
 import {AlertService} from './_services/alert.service';
 import {AlertComponent} from './_directives';
+import {OrderService} from "./_services/order.service";
 
 @NgModule({
   imports: [
@@ -81,7 +82,7 @@ import {AlertComponent} from './_directives';
     ForgottenPasswordComponent,
     AlertComponent
   ],
-  providers: [ CategoryService, MessageService, ProductService, AuthGuard, AuthService, CartService, RegisterationService, AlertService ],
+  providers: [ CategoryService, MessageService, ProductService, AuthGuard, AuthService, CartService, RegisterationService, AlertService,OrderService ],
   bootstrap: [ AppComponent, LogginButtonComponent, WelcomeTextComponent,CartButtonComponent ]
 })
 export class AppModule { }

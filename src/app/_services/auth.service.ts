@@ -87,7 +87,8 @@ export class AuthService {
   }
 
   logout() {
-    localStorage.clear();
+    // localStorage.clear();
+    localStorage.removeItem('loggedIn');
     console.log('cleared');
     this.setLoggedIn(false);
   }

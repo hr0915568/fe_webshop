@@ -1,5 +1,6 @@
 import {Component, DoCheck, OnInit} from '@angular/core';
 import {AuthService} from '../_services/auth.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-welcome-text',
@@ -10,7 +11,7 @@ export class WelcomeTextComponent implements OnInit, DoCheck {
 
   loggedIn: boolean = false;
 
-  constructor(private auth: AuthService) { }
+  constructor(private auth: AuthService,private router: Router) { }
 
   ngOnInit() {
   }
@@ -34,5 +35,13 @@ export class WelcomeTextComponent implements OnInit, DoCheck {
     }
 
     return this.auth.profile.firstname;
+  }
+
+  logout()
+  {
+    this.auth.logout();
+    this.router.navigate(['/']);
+    window.location.reload();
+
   }
 }
