@@ -1,0 +1,10 @@
+<ul class="c-sidebar-menu collapse " id="sidebar-menu-1">
+  <li class="c-dropdown c-active c-open">
+    <a href="javascript:;" class="c-toggler">Categories<span class="c-arrow"></span></a>
+    <ul class="c-dropdown-menu">
+      <li class="" *ngFor="let category of categories" routerLinkActive="c-active">
+        <a href="#" routerLink="/category/{{category.id}}">{{category.categoryName}}</a>
+      </li>
+    </ul>
+  </li>
+</ul>

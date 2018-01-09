@@ -1,0 +1,6 @@
+<h3 *ngIf="loggedIn;else visitor_text" class="c-font-uppercase c-font-sbold">Welcome {{name}}!</h3>
+
+<ng-template #visitor_text>
+  <h3 class="c-font-uppercase c-font-sbold">Welcome! </h3>
+  Don't have an account? Click <span><a href="/register">here</a></span> to create an account!
+</ng-template>

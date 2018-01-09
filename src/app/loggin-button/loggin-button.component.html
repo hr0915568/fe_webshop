@@ -1,0 +1,9 @@
+<a *ngIf="loggedIn;else sign_in_button" style="margin: 34px 15px 33px 15px;" routerLink="/dashboard"  class="c-btn-border-opacity-04 c-btn btn-no-focus c-btn-header btn btn-sm c-btn-border-1x c-btn-dark c-btn-circle c-btn-uppercase c-btn-sbold">
+  <i class="icon-user"></i> My Account
+</a>
+<ng-template #sign_in_button>
+  <a  style="margin: 34px 15px 33px 15px;" routerLink="/login" class="c-btn-border-opacity-04 c-btn btn-no-focus c-btn-header btn btn-sm c-btn-border-1x c-btn-dark c-btn-circle c-btn-uppercase c-btn-sbold">
+    <i class="icon-user"></i> Login
+  </a>
+
+</ng-template>

@@ -1,0 +1,33 @@
+/* HeroesComponent's private CSS styles */
+.filters{
+  overflow: hidden;
+  border: 1px solid #333333;
+  padding: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border: none;
+  border-radius: 4px;
+  position: relative;
+  font-size: 1.2em; 
+}
+
+.listing {
+  
+  background-color: #cccccc;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 5px;
+    cursor: pointer;
+    cursor: hand;
+  text-align: left;
+  padding: 3px ;
+  margin-bottom: 5px;
+  vertical-align: left;
+  
+}
+.listing:hover { 
+  background-color: #272525;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none; color: rgb(0, 0, 0);
+}
+

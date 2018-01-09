@@ -1,0 +1,47 @@
+<div class="c-shop-login-register-1">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="panel panel-default c-panel">
+        <div class="panel-body c-panel-body">
+          <form class="c-form-register c-margin-t-20" (ngSubmit)="f.form.valid && register()" #f="ngForm" >
+            <div class="form-group">
+              <label class="control-label">Email</label>
+              <input type="text" class="form-control c-square c-theme" placeholder="Email" name="email" [(ngModel)]="registration.email">
+            </div>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-6">
+                  <label class="control-label">First Name</label>
+                  <input type="text" class="form-control c-square c-theme" placeholder="First Name" name="firstname" [(ngModel)]="registration.firstname">
+                </div>
+                <div class="col-md-6">
+                  <label class="control-label">Last Name</label>
+                  <input type="text" class="form-control c-square c-theme" placeholder="Last Name" name="lastname" [(ngModel)]="registration.lastname">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Password</label>
+              <input type="password" class="form-control c-square c-theme" placeholder="Password" name="password" [(ngModel)]="registration.password">
+            </div>
+            <div class="form-group c-margin-t-40">
+              <button type="submit" class="btn btn-lg c-theme-btn c-btn-square c-btn-uppercase c-btn-bold">Register</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="panel panel-default c-panel">
+        <div class="panel-body c-panel-body">
+          <div class="c-content-title-1">
+            <h3 class="c-left"><i class="icon-user"></i> Already have an account?</h3>
+            <div class="c-line-left c-theme-bg"></div>
+            <p><a routerLink="/login">Click here to login</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

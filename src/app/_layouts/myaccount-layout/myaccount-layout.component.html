@@ -1,0 +1,26 @@
+<div class="container">
+  <div *ngIf="loggedIn;" class="c-layout-sidebar-menu c-theme ">
+    <ul class="c-sidebar-menu collapse " id="sidebar-menu-1">
+      <li class="c-dropdown c-active c-open">
+        <a href="javascript:;" class="c-toggler">Menu<span class="c-arrow"></span></a>
+        <ul class="c-dropdown-menu">
+          <li class="" routerLinkActive="c-active">
+            <a href="#" routerLink="/dashboard">dashboard</a>
+          </li>
+          <li class="" routerLinkActive="c-active">
+            <a href="#" routerLink="/profile">Profile</a>
+          </li>
+          <li class="" routerLinkActive="c-active">
+            <a href="#" routerLink="/invoices">Invoices</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="c-layout-sidebar-content ">
+    <alert></alert>
+    <!-- BEGIN: PAGE CONTENT -->
+    <router-outlet></router-outlet>
+    <!-- END: PAGE CONTENT -->
+  </div>
+</div>

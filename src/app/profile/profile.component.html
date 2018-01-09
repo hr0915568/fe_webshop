@@ -1,0 +1,34 @@
+<div class="">
+  <div class="row">
+      <div class="panel panel-default c-panel">
+        <div class="panel-body c-panel-body">
+          <form class="c-form-register c-margin-t-20" (ngSubmit)="f.form.valid && saveProfile()" #f="ngForm" >
+            <div class="form-group">
+              <label class="control-label">Email</label>
+              <input type="text" class="form-control c-square c-theme" placeholder="Email" name="email" [(ngModel)]="profile.email">
+            </div>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-6">
+                  <label class="control-label">First Name</label>
+                  <input type="text" class="form-control c-square c-theme" placeholder="First Name" name="firstname" [(ngModel)]="profile.firstname">
+                </div>
+                <div class="col-md-6">
+                  <label class="control-label">Last Name</label>
+                  <input type="text" class="form-control c-square c-theme" placeholder="Last Name" name="lastname" [(ngModel)]="profile.lastname">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Password</label>
+              <input type="password" class="form-control c-square c-theme" placeholder="Password" name="password" [(ngModel)]="profile.password">
+            </div>
+            <div class="form-group c-margin-t-40">
+              <button type="submit" class="btn btn-lg c-theme-btn c-btn-square c-btn-uppercase c-btn-bold">save</button>
+            </div>
+          </form>
+        </div>
+    </div>
+  </div>
+
+</div>
