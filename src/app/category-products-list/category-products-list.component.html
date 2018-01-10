@@ -10,11 +10,14 @@
               <a  routerLink="/product/{{product.id}}" class="btn btn-md c-btn-grey-1 c-btn-uppercase c-btn-bold c-btn-border-1x c-btn-square">Explore</a>
             </div>
           </div>
-          <div class="c-bg-img-center c-overlay-object" data-height="height" style="height: 230px;">
+          <!-- <div class="c-bg-img-center c-overlay-object" data-height="height" style="height: 230px;">
               <img height= "200px" width= "200px" src="../../assets/images/{{product.filename}}">
-              </div>
+              </div> -->
           <!-- <div class="c-bg-img-center c-overlay-object" data-height="height" style="height: 230px; background-image: url(../../assets/base/img/content/shop2/100.jpg);"></div>
         </div> -->
+        <div class="c-bg-img-center c-overlay-object" data-height="height" [style.background-image]="'url(../../assets/images/' + product.filename + ')'"  [style.height.px]="230"></div>
+        </div>
+        
         <div class="c-info">
           <p class="c-title c-font-16 c-font-slim">{{product.productname}}</p>
           <p class="c-price c-font-14 c-font-slim">&euro; {{product.price}}</p>
