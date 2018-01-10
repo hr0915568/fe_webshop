@@ -21,6 +21,11 @@ export class ProfileComponent implements OnInit {
 
   private getProfile()
   {
+
+    if(typeof this.auth.profile == 'undefined') {
+    return '';
+    }
+    else {
     this.http.get<Userprofile>('http://api.hrwebshop.tk/profile',  {
       withCredentials: true,
       headers: new HttpHeaders()
@@ -29,6 +34,7 @@ export class ProfileComponent implements OnInit {
     }).pipe(
       tap(customers => console.log(`fetched heroes`)),
     ).subscribe(profile => this.profile = profile);
+  }
   }
 
   saveProfile(){

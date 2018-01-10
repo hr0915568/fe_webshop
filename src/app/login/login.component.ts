@@ -9,6 +9,7 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit, DoCheck {
   credential: any = {};
+  loginfailed: Boolean = false;
 
   constructor(private auth: AuthService,
               private router: Router,) { }
@@ -31,6 +32,7 @@ export class LoginComponent implements OnInit, DoCheck {
         },
         error => {
           this.router.navigate(['login']);
+          this.loginfailed = true;
         });
   }
 
