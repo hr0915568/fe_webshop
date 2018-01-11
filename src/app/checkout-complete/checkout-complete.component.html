@@ -21,7 +21,7 @@
         </li>
         <li>
           <h3>Total Payable</h3>
-          <p>$95.00</p>
+          <p>&euro;{{total| number : '1.2-2'}}</p>
         </li>
         <li>
           <h3>Payment Method</h3>
@@ -149,8 +149,8 @@
           <ul class="list-unstyled">
             <li>John Doe</li>
             <li>
-              25, Lorem Lis Street, Orange <br />
-              California, US <br />
+                {{order.addressStreet}} <br />
+                {{order.addressNumberAdd}} <br />
             </li>
           </ul>
         </div>

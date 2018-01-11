@@ -31,13 +31,10 @@ export class CheckoutComponent implements OnInit {
    }
 
 
-   getTotalPrice() {
-    this.products = this.cart._getcart()
-    for (let product of this.products) {
-        this.total = this.total + product.price;
-    }
-   return this.total;
-   }
+   getTotalPrice():number {
+    this.total  = this.cart._getCartTotPrice();
+    return this.total;
+  }
 
 
    placeorder()

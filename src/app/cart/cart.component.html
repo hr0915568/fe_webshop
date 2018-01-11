@@ -43,11 +43,11 @@
 					</div>
 					<div class="col-md-2 col-sm-3 col-xs-6 c-cart-price">
 						<p class="c-cart-sub-title c-theme-font c-font-uppercase c-font-bold">Unit Price</p>
-						<p class="c-cart-price c-font-bold">&euro;{{product.price}}</p>
+						<p class="c-cart-price c-font-bold">&euro;{{product.price| number : '1.2-2'}}</p>
 					</div>
 					<div class="col-md-1 col-sm-3 col-xs-6 c-cart-total">
 						<p class="c-cart-sub-title c-theme-font c-font-uppercase c-font-bold">Total</p>
-						<p class="c-cart-price c-font-bold">&euro;{{product.price}}</p>
+						<p class="c-cart-price c-font-bold">&euro;{{product.price| number : '1.2-2'}}</p>
 					</div>
 					<div class="col-md-1 col-sm-12 c-cart-remove">
 						<a class="c-theme-link c-cart-remove-desktop" (click)="deleteFromCart(product)">x</a>
