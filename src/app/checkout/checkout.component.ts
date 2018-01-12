@@ -3,6 +3,10 @@ import {CartService} from './../_services/cart.service';
 import {Product} from '../_models/product';
 import {OrderService} from '../_services/order.service';
 import {Router} from '@angular/router';
+import {GuestOrder} from '../_models/GuestOrder';
+import {OrderProduct} from '../_models/order-product';
+import {AlertService} from '../_services/alert.service';
+import {AuthService} from '../_services/auth.service';
 
 @Component({
   selector: 'app-checkout',
@@ -10,59 +14,19 @@ import {Router} from '@angular/router';
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent implements OnInit {
-  products : Product[];
-  total : number = 0;
-  order: any = {};
-  CheckBoxTerms: boolean= false;
 
-  constructor(private cart: CartService,private orderService: OrderService,
-    private router: Router) { }
+
+
+  constructor(private cartService: CartService,private orderService: OrderService,
+    private router: Router, private alertService: AlertService, private auth: AuthService) { }
 
   ngOnInit() {
-    this.getproductsforCart();
-    this.getTotalPrice();
-    this.CheckBoxTerms;
-  }
-
-  getproductsforCart() {
-    this.products = this.cart._getcart()
-   // console.log(this.products);
-   return this.products;
-   }
-
-
-   getTotalPrice() {
-    this.products = this.cart._getcart()
-    for (let product of this.products) {
-        this.total = this.total + product.price;
+    if(this.auth.isLoggedIn()) {
+      this.router.navigate(['checkout-registered'])
+      return;
     }
-   return this.total;
-   }
-
-
-   placeorder()
-   {
-     this.orderService.placeorder(
-       this.order.street,
-       this.order.streetno,
-       this.order.streetnoadd,
-       this.order.postalcode).subscribe(
-         response => {
-           console.log(response);
-         },
-       error => {
-           console.log(error)
-       }
-     );
-     console.log(this.order.street);
-   }
-
-   CheckboxToggle(){
-    this.CheckBoxTerms = !this.CheckBoxTerms;// this will change value of it true and false 
-    console.log(this.CheckBoxTerms);
+    this.router.navigate(['checkout-guest'])
   }
 
-  clearCart() {
-    this.cart._clearCart()
-  }
+
 }

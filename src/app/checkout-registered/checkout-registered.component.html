@@ -1,0 +1,148 @@
+<!-- BEGIN: PAGE CONTENT
+    <div class="c-content-box c-size-lg">
+  <div class="container">
+
+      <!-- <div class="row">  -->
+<!-- BEGIN: ADDRESS FORM -->
+<form name="checkout-form" class="c-shop-form-1" (ngSubmit)="f.form.valid && placeorder()" #f="ngForm">
+  <div class="col-md-7 c-padding-20">
+    <!-- BEGIN: BILLING ADDRESS -->
+    <h3 class="c-font-bold c-font-uppercase c-font-24">Billing Address</h3>
+
+    <div class="row">
+      <div class="form-group col-md-12">
+        <label class="control-label">Company Name</label>
+        <input type="text" class="form-control c-square c-theme" placeholder="Company Name" name="company" [(ngModel)]="company">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-12">
+        <label class="control-label">Country</label>
+        <select required class="form-control c-square c-theme" [(ngModel)]="country" name="country">
+          <option value="1">Nederland</option>
+          <option value="2">Belgie</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-12">
+        <label class="control-label">Town / City</label>
+        <input required type="text" class="form-control c-square c-theme" placeholder="Town / City" [(ngModel)]="city" name="city">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <label class="control-label">Postcode / Zip</label>
+        <input required type="text" class="form-control c-square c-theme" placeholder="Postcode / Zip" [(ngModel)]="zipcode" name="zipcode">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-12">
+        <label class="control-label">Street and streetnumber</label>
+        <div class="row">
+          <div class="form-group col-md-8">
+            <input required  type="text" class="form-control c-square c-theme" placeholder="Street Address" [(ngModel)]="street" name="street">
+          </div>
+          <div class="col-md-4">
+            <input required type="text" class="form-control c-square c-theme" placeholder="Street number" [(ngModel)]="streetNumber" name="streetNumber">
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-12">
+        <input type="text" class="form-control c-square c-theme" placeholder="Apartment, suite, unit etc. (optional)" [(ngModel)]="addressExtra" name="addressExtra">
+      </div>
+    </div>
+
+
+
+
+    <div class="row">
+      <div class="form-group col-md-12">
+        <label class="control-label">Order Notes</label>
+        <textarea class="form-control c-square c-theme" rows="3" placeholder="Note about your order, e.g. special notes for delivery." name="orderNotes" [(ngModel)]="orderNotes"></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- END: ADDRESS FORM -->
+  <!-- BEGIN: ORDER FORM -->
+  <div class="col-md-5">
+    <div class="c-content-bar-1 c-align-left c-bordered c-theme-border c-shadow">
+      <h1 class="c-font-bold c-font-uppercase c-font-24">Your Order</h1>
+      <ul class="c-order list-unstyled">
+        <li class="row c-margin-b-15">
+          <div class="col-md-6 c-font-20"><h2>Product</h2></div>
+          <div class="col-md-6 c-font-20"><h2>Total</h2></div>
+        </li>
+        <li class="row c-border-bottom"></li>
+        <li class="row c-margin-b-15 c-margin-t-15" *ngFor="let product of products">
+          <div class="col-md-6 c-font-20"><a href="shop-product-details.html" class="c-theme-link">{{product.productname}}</a></div>
+          <div class="col-md-6 c-font-20">
+            <p class="">&euro;{{product.price}}</p>
+          </div>
+        </li>
+        <li class="row c-margin-b-15 c-margin-t-15">
+          <div class="col-md-6 c-font-20">Subtotal</div>
+          <div class="col-md-6 c-font-20">
+            <p class="">&euro;<span class="c-subtotal">{{total}}</span></p>
+          </div>
+        </li>
+        <li class="row c-border-top c-margin-b-15"></li>
+        <li class="row">
+          <div class="col-md-6 c-font-20">Shipping</div>
+          <div class="col-md-6">
+            <div class="c-radio-list c-shipping-calculator" data-name="shipping_price" data-subtotal-selector="c-subtotal" data-total-selector="c-shipping-total">
+              <div class="c-radio">
+                <input type="radio" value="20" id="radio11" class="c-radio" name="shipping_price" checked="">
+                <label for="radio11">
+                  <span class="inc"></span>
+                  <span class="check"></span>
+                  <span class="box"></span>
+                  Free shipping
+                </label>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="row c-margin-b-15 c-margin-t-15">
+          <div class="col-md-6 c-font-20">
+            <p class="c-font-30">Total</p>
+          </div>
+          <div class="col-md-6 c-font-20">
+            <p class="c-font-bold c-font-30">&euro;<span class="c-shipping-total">{{total}}</span></p>
+          </div>
+        </li>
+        <li class="row c-margin-b-15 c-margin-t-15">
+          <div class="form-group col-md-12">
+            <div class="c-checkbox">
+              <input required type="checkbox" id="checkbox1-11" class="c-check" [(ngModel)]="CheckBoxTerms" name="CheckBoxTerms">
+              <label for="checkbox1-11">
+                <span class="inc"></span>
+                <span class="check"></span>
+                <span class="box"></span>
+                I’ve read and accept the Terms & Conditions
+              </label>
+            </div>
+          </div>
+        </li>
+        <li class="row">
+          <div class="form-group col-md-12" role="group">
+            <button type="submit" class="btn btn-lg c-theme-btn c-btn-square c-btn-uppercase c-btn-bold">Submit</button>
+            <button routerLink="/cart" type="submit" class="btn btn-lg btn-default c-btn-square c-btn-uppercase c-btn-bold">Cancel</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div> </form>
+<!-- END: ORDER FORM -->
+<!-- </div>
+
+</div>
+</div>   -->
+<!-- END: PAGE CONTENT -->
+
+<!-- END: PAGE CONTAINER -->

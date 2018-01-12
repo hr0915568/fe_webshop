@@ -20,6 +20,8 @@ import {InvoicesComponent} from './invoices/invoices.component';
 import {ProfileComponent} from './profile/profile.component';
 import { CheckoutCompleteComponent } from './checkout-complete/checkout-complete.component';
 import {ForgottenPasswordComponent} from './forgotten-password/forgotten-password.component';
+import {CheckoutGuestComponent} from './checkout-guest/checkout-guest.component';
+import {CheckoutRegisteredComponent} from './checkout-registered/checkout-registered.component';
 
 const routes: Routes = [
   {
@@ -35,6 +37,8 @@ const routes: Routes = [
       { path: 'search', component: SearchComponent},
       { path: 'cart', component :CartComponent},
       { path: 'checkout', component: CheckoutComponent},
+      { path: 'checkout-guest', component: CheckoutGuestComponent},
+      { path: 'checkout-registered', component: CheckoutRegisteredComponent},
       { path: 'product/:id', component: ProductsComponent},
       { path: 'checkout-complete', component: CheckoutCompleteComponent}
     ]

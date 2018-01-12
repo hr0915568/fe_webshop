@@ -41,6 +41,8 @@ import { ForgottenPasswordComponent } from './forgotten-password/forgotten-passw
 import {AlertService} from './_services/alert.service';
 import {AlertComponent} from './_directives';
 import {OrderService} from "./_services/order.service";
+import { CheckoutGuestComponent } from './checkout-guest/checkout-guest.component';
+import { CheckoutRegisteredComponent } from './checkout-registered/checkout-registered.component';
 
 @NgModule({
   imports: [
@@ -80,7 +82,9 @@ import {OrderService} from "./_services/order.service";
     CartButtonComponent,
     CheckoutCompleteComponent,
     ForgottenPasswordComponent,
-    AlertComponent
+    AlertComponent,
+    CheckoutGuestComponent,
+    CheckoutRegisteredComponent
   ],
   providers: [ CategoryService, MessageService, ProductService, AuthGuard, AuthService, CartService, RegisterationService, AlertService,OrderService ],
   bootstrap: [ AppComponent, LogginButtonComponent, WelcomeTextComponent,CartButtonComponent ]

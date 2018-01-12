@@ -1,9 +1,9 @@
 .imagecontour {
- padding: 10px; 
+ padding: 10px;
  border: solid 1px #EFEFEF;
  background-color: #FFFFFF;
  }
- 
+
 .effect2
 {
   position: relative;
@@ -27,4 +27,8 @@
   transform: rotate(3deg);
   right: 10px;
   left: auto;
+}
+
+.ng-invalid.ng-touched {
+  border-color: red;
 }

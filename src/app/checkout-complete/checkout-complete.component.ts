@@ -9,7 +9,7 @@ import {Product} from '../_models/product';
 })
 export class CheckoutCompleteComponent implements OnInit {
   products: Product[];
-  
+
   constructor(private cart: CartService) { }
 
   ngOnInit() {
@@ -17,7 +17,7 @@ export class CheckoutCompleteComponent implements OnInit {
   }
 
   getproductsforCart() {
-    this.products = this.cart._getcart()
+    this.products = this.cart.cart;
    return this.products;
    }
 }

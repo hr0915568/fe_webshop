@@ -1,29 +1,39 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {catchError, tap} from 'rxjs/operators';
+import {Order} from '../_models/Order';
+import {OrderProduct} from '../_models/order-product';
+import {GuestOrder} from '../_models/GuestOrder';
 
 
 @Injectable()
 export class OrderService {
 
   constructor(private http: HttpClient) { }
-  
-    placeorder(addressStreet: string, addressNumber: string, addressNumberAdd: string, postalCode: string) {
-      const body = new HttpParams()
-        .set('addressStreet', addressStreet)
-        .set('addressNumber', addressNumber)
-        .set('addressNumberAdd', addressNumberAdd)
-        .set('postalCode', postalCode)
-      ;
-  
-      return this.http.post('http://api.hrwebshop.tk/orderproduct', body.toString(),
+
+    placeorderAsGuest(order: Order) {
+
+      return this.http.post('http://api.hrwebshop.tk/place-order-asguest', order,
         {
           responseType: 'text',
           withCredentials: true,
           headers: new HttpHeaders()
-            .set('Content-type', 'application/x-www-form-urlencoded')
+            .set('Content-type', 'application/json')
         }
       )
     }
+
+
+  placeorderAsRegisteredUser(order: Order) {
+
+    return this.http.post('http://api.hrwebshop.tk/place-order-registered', order,
+      {
+        responseType: 'text',
+        withCredentials: true,
+        headers: new HttpHeaders()
+          .set('Content-type', 'application/json')
+      }
+    )
+  }
 
 }

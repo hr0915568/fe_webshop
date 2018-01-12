@@ -11,7 +11,7 @@ import {catchError, tap} from 'rxjs/operators';
 export class AuthService {
 
   // Create a stream of logged in status to communicate throughout app
-  loggedIn: boolean;
+  loggedIn: boolean = false;
   loggedIn$ = new BehaviorSubject<boolean>(this.loggedIn);
   profile: Userprofile;
 
@@ -98,6 +98,10 @@ export class AuthService {
     return this.loggedIn;
   }
 
+  isLoggedIn()
+  {
+    return this.loggedIn == true;
+  }
 
   forgottenPassword(username)
   {
