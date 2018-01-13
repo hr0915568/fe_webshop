@@ -43,6 +43,11 @@ import {AlertComponent} from './_directives';
 import {OrderService} from "./_services/order.service";
 import { CheckoutGuestComponent } from './checkout-guest/checkout-guest.component';
 import { CheckoutRegisteredComponent } from './checkout-registered/checkout-registered.component';
+import { AboutComponent } from './about/about.component';
+import { TermsComponent } from './terms/terms.component';
+import { DataprotectionComponent } from './dataprotection/dataprotection.component';
+import { ContactComponent } from './contact/contact.component';
+
 
 @NgModule({
   imports: [
@@ -84,7 +89,11 @@ import { CheckoutRegisteredComponent } from './checkout-registered/checkout-regi
     ForgottenPasswordComponent,
     AlertComponent,
     CheckoutGuestComponent,
-    CheckoutRegisteredComponent
+    CheckoutRegisteredComponent,
+    AboutComponent,
+    TermsComponent,
+    DataprotectionComponent,
+    ContactComponent
   ],
   providers: [ CategoryService, MessageService, ProductService, AuthGuard, AuthService, CartService, RegisterationService, AlertService,OrderService ],
   bootstrap: [ AppComponent, LogginButtonComponent, WelcomeTextComponent,CartButtonComponent ]

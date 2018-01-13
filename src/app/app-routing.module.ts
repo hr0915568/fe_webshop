@@ -22,6 +22,10 @@ import { CheckoutCompleteComponent } from './checkout-complete/checkout-complete
 import {ForgottenPasswordComponent} from './forgotten-password/forgotten-password.component';
 import {CheckoutGuestComponent} from './checkout-guest/checkout-guest.component';
 import {CheckoutRegisteredComponent} from './checkout-registered/checkout-registered.component';
+import {AboutComponent} from './about/about.component';
+import {TermsComponent} from './terms/terms.component';
+import {DataprotectionComponent} from './dataprotection/dataprotection.component';
+import {ContactComponent} from './contact/contact.component';
 
 const routes: Routes = [
   {
@@ -40,7 +44,11 @@ const routes: Routes = [
       { path: 'checkout-guest', component: CheckoutGuestComponent},
       { path: 'checkout-registered', component: CheckoutRegisteredComponent},
       { path: 'product/:id', component: ProductsComponent},
-      { path: 'checkout-complete', component: CheckoutCompleteComponent}
+      { path: 'checkout-complete', component: CheckoutCompleteComponent},
+      { path: 'about', component:AboutComponent},
+      { path: 'terms', component:TermsComponent},
+      { path: 'data_protection', component:DataprotectionComponent},
+      { path: 'contact', component: ContactComponent}
     ]
   },
   {
