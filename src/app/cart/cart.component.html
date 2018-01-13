@@ -1,16 +1,16 @@
 		<!-- BEGIN: PAGE CONTENT -->
 		<!-- BEGIN: CONTENT/SHOPS/SHOP-CART-1 -->
-		<div class="c-shop-cart-page-1" item-width="100%" *ngIf="products !== null">
+		<div class="c-shop-cart-page-1" item-width="100%" *ngIf="products.length > 0">
 				<div class="row c-cart-table-title">
 					<div class="col-md-2 c-cart-image">
 						<h3 class="c-font-uppercase c-font-bold c-font-16 c-font-grey-2">Image</h3>
 					</div>
-					<div class="col-md-4 c-cart-desc">
+					<div class="col-md-6 c-cart-desc">
 						<h3 class="c-font-uppercase c-font-bold c-font-16 c-font-grey-2">Description</h3>
 					</div>
-					<div class="col-md-2 c-cart-price">
+					<!-- <div class="col-md-2 c-cart-price">
 						<h3 class="c-font-uppercase c-font-bold c-font-16 c-font-grey-2">Unit Price</h3>
-					</div>
+					</div> -->
 					<div class="col-md-1 c-cart-total">
 						<h3 class="c-font-uppercase c-font-bold c-font-16 c-font-grey-2">Total</h3>
 					</div>
@@ -23,16 +23,14 @@
 					<div class="col-md-2 col-sm-3 col-xs-5 c-cart-image">
 						<img src="../../assets/images/{{product.filename}}"/>
 					</div>
-					<div class="col-md-4 col-sm-9 col-xs-7 c-cart-desc">
+					<div class="col-md-6 col-sm-9 col-xs-7 c-cart-desc">
 						<h3><a routerLink="/product/{{product.id}}" class="c-font-bold c-theme-link c-font-22 c-font-dark">{{product.productname}}</a></h3>
-						<p>Color: Blue</p>
-						<p>Size: S</p>
 					</div>
 
-					<div class="col-md-2 col-sm-3 col-xs-6 c-cart-price">
+					<!-- <div class="col-md-2 col-sm-3 col-xs-6 c-cart-price">
 						<p class="c-cart-sub-title c-theme-font c-font-uppercase c-font-bold">Unit Price</p>
 						<p class="c-cart-price c-font-bold">&euro;{{product.price| number : '1.2-2'}}</p>
-					</div>
+					</div> -->
 					<div class="col-md-1 col-sm-3 col-xs-6 c-cart-total">
 						<p class="c-cart-sub-title c-theme-font c-font-uppercase c-font-bold">Total</p>
 						<p class="c-cart-price c-font-bold">&euro;{{product.price| number : '1.2-2'}}</p>
@@ -60,7 +58,7 @@
 			</div>
 
 
-					<div class="c-shop-cart-page-1 c-center" *ngIf="products == undefined">
+					<div class="c-shop-cart-page-1 c-center" *ngIf="products.length == []">
 						<i class="fa fa-frown-o c-font-dark c-font-50 c-font-thin "></i>
 						<h2 class="c-font-thin c-center">Your Shopping Cart is Empty</h2>
 						<a  onclick="goBack()" class="btn c-btn btn-lg c-btn-dark c-btn-square c-font-white c-font-bold c-font-uppercase">Continue Shopping</a>

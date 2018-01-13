@@ -1,13 +1,21 @@
-import {Userprofile} from '../_models/userprofile';
-import {Orderproducts} from '../_models/orderproducts';
+import {OrderProduct} from './order-product';
 
-export class Order {
-    id: number;
-    addressstreet: string;
-    addressnumber: number;
-    addressnumberadd: string;
-    postalcode: string;
-    ordertime: Date;
-    user: Userprofile;
-    orderproducts: Orderproducts;
-  }
+export abstract class Order {
+
+  company: string;
+
+  country: string;
+  city: string;
+  zipcode: string;
+
+  street: string;
+  streetNumber: string;
+  addressExtra: string;
+
+
+  orderNotes: string;
+
+  products: OrderProduct[] = [];
+
+
+}
