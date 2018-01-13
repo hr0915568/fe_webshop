@@ -18,6 +18,6 @@ export class CheckoutCompleteComponent implements OnInit {
 
   getproductsforCart() {
     this.products = this.cart.cart;
-   return this.products;
+     return this.products;
    }
 }
