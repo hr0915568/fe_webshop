@@ -7,6 +7,8 @@ import {forEach} from '@angular/router/src/utils/collection';
 import {AuthService} from '../_services/auth.service';
 import {CartService} from '../_services/cart.service';
 import {WishlistService} from './../_services/wishlist.service';
+import {AlertService} from '../_services/alert.service';
+import {ChangeDetectorRef} from '@angular/core';
 
 @Component({
   selector: 'app-category-products-list',
@@ -21,7 +23,8 @@ export class CategoryProductsListComponent implements OnInit {
               private categoryService: CategoryService,
               private auth: AuthService,
               private cart: CartService,
-              private wishlistService: WishlistService
+              private wishlistService: WishlistService,
+              private cd : ChangeDetectorRef, private alertService: AlertService
               ) { }
 
   ngOnInit() {
@@ -66,6 +69,7 @@ export class CategoryProductsListComponent implements OnInit {
 
   addToWishlist(product) {
     this.wishlistService._addtowishlist(product);
+    this.alertService.error("Added to wishlist");
   }
 
 }
