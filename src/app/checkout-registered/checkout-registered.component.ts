@@ -79,6 +79,7 @@ export class CheckoutRegisteredComponent implements OnInit {
       },
       error => {
         console.log(error);
+        console.log('test');
       }
     );
 

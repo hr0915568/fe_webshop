@@ -66,7 +66,7 @@ export class AuthService {
         .set('Content-type', 'text/plain')
 
     }).pipe(
-      tap(customers => console.log(`fetched heroes`)),
+      tap(customers => console.log(`succes`)),
     ).subscribe(profile => this.profile = profile);
   }
 

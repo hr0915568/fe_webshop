@@ -26,6 +26,7 @@ import {AboutComponent} from './about/about.component';
 import {TermsComponent} from './terms/terms.component';
 import {DataprotectionComponent} from './dataprotection/dataprotection.component';
 import {ContactComponent} from './contact/contact.component';
+import {WishlistComponent} from './wishlist/wishlist.component';
 
 const routes: Routes = [
   {
@@ -62,6 +63,7 @@ const routes: Routes = [
       { path: 'invoices', component: InvoicesComponent, canActivate: [AuthGuard]},
       { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
       { path: 'forgotten-password', component: ForgottenPasswordComponent},
+      { path: 'wishlist', component: WishlistComponent}
     ]
   }
 
