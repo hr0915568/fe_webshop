@@ -52,7 +52,7 @@ export class CategoryService {
     };
   }
 
-  /** GET heroes from the server */
+
   getProductsOfCategory (categoryId: number): Observable<Product[]> {
     return this.http.get<Product[]>('http://api.hrwebshop.tk/category/' + categoryId)
       .pipe(

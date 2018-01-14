@@ -1,9 +1,9 @@
 <div class="row">
-    <div class="col-sm-4">
-      <ul class="c-content-list-1 c-theme c-separator-dot c-font-uppercase">
-        <li>Invoice #1</li>
-        <li>Invoice #</li>
-        <li>Invoice #</li>
+    <div class="col-sm-6">
+      <ul class="c-content-list-1 c-theme c-separator-dot">
+        <li *ngFor="let invoice of invoices">
+          <a href="#" routerLink="/invoice/{{invoice.id}}">Order date: {{invoice.invoiceDate}} Invoice ID: {{invoice.id}} </a> status: Shipped
+        </li>
       </ul>
     </div>
 </div>
