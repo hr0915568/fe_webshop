@@ -47,6 +47,8 @@ import { AboutComponent } from './about/about.component';
 import { TermsComponent } from './terms/terms.component';
 import { DataprotectionComponent } from './dataprotection/dataprotection.component';
 import { ContactComponent } from './contact/contact.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
+import { WishlistService } from './_services/wishlist.service';
 
 
 @NgModule({
@@ -93,9 +95,10 @@ import { ContactComponent } from './contact/contact.component';
     AboutComponent,
     TermsComponent,
     DataprotectionComponent,
-    ContactComponent
+    ContactComponent,
+    WishlistComponent
   ],
-  providers: [ CategoryService, MessageService, ProductService, AuthGuard, AuthService, CartService, RegisterationService, AlertService,OrderService ],
+  providers: [ CategoryService, MessageService, ProductService, AuthGuard, AuthService, CartService, RegisterationService, AlertService,OrderService,WishlistService ],
   bootstrap: [ AppComponent, LogginButtonComponent, WelcomeTextComponent,CartButtonComponent ]
 })
 export class AppModule { }
