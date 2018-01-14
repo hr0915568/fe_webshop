@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {catchError, tap} from 'rxjs/operators';
-import {Order} from '../_models/Order';
+import {Order} from '../_models/order';
 import {OrderProduct} from '../_models/order-product';
 import {GuestOrder} from '../_models/GuestOrder';
 

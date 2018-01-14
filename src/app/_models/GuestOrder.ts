@@ -1,5 +1,5 @@
 import {OrderProduct} from './order-product';
-import {Order} from './Order';
+import {Order} from './order';
 
 export  class GuestOrder extends  Order{
   firstName: string;
