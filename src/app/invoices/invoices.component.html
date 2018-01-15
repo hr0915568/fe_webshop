@@ -2,7 +2,7 @@
     <div class="col-sm-6">
       <ul class="c-content-list-1 c-theme c-separator-dot">
         <li *ngFor="let invoice of invoices">
-          <a href="#" routerLink="/invoice/{{invoice.id}}">Order date: {{invoice.invoiceDate}} Invoice ID: {{invoice.id}} </a> status: Shipped
+          <a href="http://api.hrwebshop.tk/download/{{invoice.id}}" target="_blank" >Order date: {{invoice.invoiceDate}} Invoice ID: {{invoice.id}} </a> status: Shipped
         </li>
       </ul>
     </div>
