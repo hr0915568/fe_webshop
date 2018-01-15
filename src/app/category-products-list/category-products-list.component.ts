@@ -32,7 +32,7 @@ export class CategoryProductsListComponent implements OnInit {
     // (+) converts string 'id' to a number
       .switchMap((params: ParamMap) => this.categoryService.getProductsOfCategory(+params.get('id')))
       .subscribe((products) => this.products = products);
-      
+
   }
 
   /**
@@ -69,7 +69,7 @@ export class CategoryProductsListComponent implements OnInit {
 
   addToWishlist(product) {
     this.wishlistService._addtowishlist(product);
-    this.alertService.error("Added to wishlist");
+    this.alertService.success("Added to wishlist");
   }
 
 }
