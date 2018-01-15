@@ -3,74 +3,75 @@
   </div> -->
 
   <div class="c-content-box c-overflow-hide c-bg-grey">
-    <div class="c-content-product-3 c-bs-grid-reset-space">
-      <div class="row">
-        <div class="col-md-8 col-sm-6">
-          <div class="c-content-overlay">
-            <div class="c-overlay-wrapper">
-              <div class="c-overlay-content">
-                <a routerLink="/product/10" class="btn btn-md c-btn-grey-1 c-btn-uppercase c-btn-bold c-btn-border-1x c-btn-square">Explore</a>
+      <div class="c-content-product-3 c-bs-grid-reset-space">
+        <div class="row">
+          <div class="col-md-8 col-sm-6">
+            <div class="c-content-overlay">
+              <div class="c-overlay-wrapper">
+                <div class="c-overlay-content">
+                  <a routerLink="/product/{{product.id}}" class="btn btn-md c-btn-grey-1 c-btn-uppercase c-btn-bold c-btn-border-1x c-btn-square">Explore</a>
+                </div>
               </div>
+              <div class="c-bg-img-center c-overlay-object" data-height="height" style="height: 550px; background-image: url(../../assets/images/tire10.jpg);"></div>
             </div>
-            <div class="c-bg-img-center c-overlay-object" data-height="height" style="height: 550px; background-image: url(../../assets/images/tire10.jpg);"></div>
           </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="c-wrapper c-bg-red" style="height: 550px;">
-            <div class="c-content c-border c-border-padding c-border-padding-right">
-              <h3 class="c-title c-font-25 c-font-white c-font-uppercase c-font-bold">Tire</h3>
-              <p class="c-description c-font-17 c-font-white">Pirelli Winter Snowcontrol Serie 3</p>
-              <p class="c-price c-font-55 c-font-white c-font-thin">&euro;96.75</p>
-              <a routerLink="/product/10" class="btn btn-lg c-btn-white c-font-uppercase c-btn-square c-btn-border-1x">See product!</a>
+          <div class="col-md-4 col-sm-6">
+            <div class="c-wrapper c-bg-red" style="height: 550px;">
+              <div class="c-content c-border c-border-padding c-border-padding-right">
+                <h3 class="c-title c-font-20 c-font-white c-font-uppercase c-font-bold">{{product.productname}}</h3>
+                <p class="c-description c-font-13 c-font-white">{{product.description}}</p>
+                <p class="c-price c-font-30 c-font-white c-font-thin">&euro;{{product.price}}</p>
+                <a routerLink="/product/{{product.id}}" class="btn btn-lg c-btn-white c-font-uppercase c-btn-square c-btn-border-1x">See product!</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
- 
-  <div class="c-line-center"></div>
-
-      <div class="c-content-tab-5 c-bs-grid-reset-space c-theme">
-        <!-- Tab panes -->
-        <div class="tab-content">
-          <div role="tabpanel" class="tab-pane fade in active" id="watches">
-            <div class="row">
-              <div class="col-sm-4">
-                <div class="c-content c-content-overlay">
-                  <div class="c-overlay-wrapper c-overlay-padding">
-                    <div class="c-overlay-content">
-                      <a routerLink="/product/1" class="btn btn-md c-btn-grey-1 c-btn-uppercase c-btn-bold c-btn-border-1x c-btn-square">Explore</a>
+   
+    <div class="c-line-center"></div>
+  
+        <div class="c-content-tab-5 c-bs-grid-reset-space c-theme">
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="watches">
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="c-content c-content-overlay">
+                    <div class="c-overlay-wrapper c-overlay-padding">
+                      <div class="c-overlay-content">
+                        <a routerLink="/product/1" class="btn btn-md c-btn-grey-1 c-btn-uppercase c-btn-bold c-btn-border-1x c-btn-square">Explore</a>
+                      </div>
                     </div>
+                    <div class="c-bg-img-center c-overlay-object" data-height="height" style="height: 270px; background-image: url(../../assets/images/tire1.jpg);"></div>
+                    <div class="c-overlay-border"></div>
                   </div>
-                  <div class="c-bg-img-center c-overlay-object" data-height="height" style="height: 270px; background-image: url(../../assets/images/tire1.jpg);"></div>
-                  <div class="c-overlay-border"></div>
                 </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="c-content c-content-overlay">
-                  <div class="c-overlay-wrapper c-overlay-padding">
-                    <div class="c-overlay-content">
-                      <a routerLink="/product/96" class="btn btn-md c-btn-grey-1 c-btn-uppercase c-btn-bold c-btn-border-1x c-btn-square">Explore</a>
+                <div class="col-sm-4">
+                  <div class="c-content c-content-overlay">
+                    <div class="c-overlay-wrapper c-overlay-padding">
+                      <div class="c-overlay-content">
+                        <a routerLink="/product/96" class="btn btn-md c-btn-grey-1 c-btn-uppercase c-btn-bold c-btn-border-1x c-btn-square">Explore</a>
+                      </div>
                     </div>
+                    <div class="c-bg-img-center c-overlay-object" data-height="height" style="height: 270px; background-image: url(../../assets/images/light2.jpg);"></div>
+                    <div class="c-overlay-border"></div>
                   </div>
-                  <div class="c-bg-img-center c-overlay-object" data-height="height" style="height: 270px; background-image: url(../../assets/images/light2.jpg);"></div>
-                  <div class="c-overlay-border"></div>
                 </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="c-content c-content-overlay">
-                  <div class="c-overlay-wrapper c-overlay-padding">
-                    <div class="c-overlay-content">
-                      <a routerLink="/product/84" class="btn btn-md c-btn-grey-1 c-btn-uppercase c-btn-bold c-btn-border-1x c-btn-square">Explore</a>
+                <div class="col-sm-4">
+                  <div class="c-content c-content-overlay">
+                    <div class="c-overlay-wrapper c-overlay-padding">
+                      <div class="c-overlay-content">
+                        <a routerLink="/product/84" class="btn btn-md c-btn-grey-1 c-btn-uppercase c-btn-bold c-btn-border-1x c-btn-square">Explore</a>
+                      </div>
                     </div>
+                    <div class="c-bg-img-center c-overlay-object" data-height="height" style="height: 270px; background-image: url(../../assets/images/wheel5.jpg);"></div>
+                    <div class="c-overlay-border"></div>
                   </div>
-                  <div class="c-bg-img-center c-overlay-object" data-height="height" style="height: 270px; background-image: url(../../assets/images/wheel5.jpg);"></div>
-                  <div class="c-overlay-border"></div>
                 </div>
               </div>
             </div>
+  
           </div>
-
         </div>
-      </div>
+  
