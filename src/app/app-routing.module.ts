@@ -38,7 +38,6 @@ const routes: Routes = [
       { path: 'details/:id', component: HeroDetailComponent },
       { path: 'category', component: CategoryComponent },
       { path: 'category/:id', component: CategoryProductsListComponent },
-      { path: 'search/:keywords', component: SearchComponent},
       { path: 'search', component: SearchComponent},
       { path: 'cart', component :CartComponent},
       { path: 'checkout', component: CheckoutComponent},

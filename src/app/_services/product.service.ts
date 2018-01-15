@@ -67,4 +67,15 @@ export class ProductService {
   private log(message: string) {
     this.messageService.add('HeroService: ' + message);
   }
+
+  search(keyword: string): Observable<Product[]> {
+    var url = 'http://api.hrwebshop.tk/search/' +encodeURI(keyword);
+    return this.http.get<Product[]>(url,  {
+      withCredentials: true,
+      headers: new HttpHeaders()
+        .set('Content-type', 'text/plain')
+
+    })
+
+  }
 }

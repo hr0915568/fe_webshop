@@ -49,6 +49,7 @@ import { DataprotectionComponent } from './dataprotection/dataprotection.compone
 import { ContactComponent } from './contact/contact.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { WishlistService } from './_services/wishlist.service';
+import { SearchButtonComponent } from './search-button/search-button.component';
 
 
 @NgModule({
@@ -96,9 +97,10 @@ import { WishlistService } from './_services/wishlist.service';
     TermsComponent,
     DataprotectionComponent,
     ContactComponent,
-    WishlistComponent
+    WishlistComponent,
+    SearchButtonComponent
   ],
   providers: [ CategoryService, MessageService, ProductService, AuthGuard, AuthService, CartService, RegisterationService, AlertService,OrderService,WishlistService ],
-  bootstrap: [ AppComponent, LogginButtonComponent, WelcomeTextComponent,CartButtonComponent ]
+  bootstrap: [ AppComponent, LogginButtonComponent, WelcomeTextComponent,CartButtonComponent, SearchButtonComponent ]
 })
 export class AppModule { }

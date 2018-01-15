@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Product} from '../_models/product';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {CartService} from '../_services/cart.service';
 
 @Component({
   selector: 'app-search',
@@ -11,7 +12,7 @@ export class SearchComponent implements OnInit {
 
   results: Product[] = [];
   keyword: string;
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private cart: CartService) {
 
   }
 
@@ -39,5 +40,10 @@ export class SearchComponent implements OnInit {
   {
     this.results = [];
     this.keyword = null;
+  }
+
+
+  addToCart(product) {
+    this.cart._addtocart(product)
   }
 }
