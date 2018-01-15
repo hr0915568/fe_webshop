@@ -35,7 +35,7 @@
           <a class="c-theme-link" routerLink="/product/{{product.id}}">{{product.name}}</a>
         </h3>
         <p class="c-desc c-font-16 c-font-thin">{{product.description}}</p>
-        <p class="c-price c-font-26 c-font-thin">&euro; {{product.price}}
+        <p class="c-price c-font-26 c-font-thin">&euro; {{product.price| number : '1.2-2'}}
         </p>
       </div>
       <div>
