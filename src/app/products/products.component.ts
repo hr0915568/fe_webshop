@@ -17,7 +17,7 @@ import {CartService} from '../_services/cart.service';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
- product: Product;
+ product: Product = new Product();
 
 
   constructor(
